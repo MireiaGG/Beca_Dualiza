@@ -1,0 +1,563 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+    color: #333;
+
+    /* Evita que el header tape el contenido */
+    padding-top: 85px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    background: #ffffff;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    max-width: 1500px;
+
+    height: 85px;
+
+    margin: 0 auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.navbar h1 {
+    color: #1e3a8a;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   MENÚ
+========================================= */
+
+.navbar ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 3px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   ENLACES
+========================================= */
+
+.navbar ul li a {
+    display: block;
+
+    padding: 10px 9px;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 7px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================
+   EFECTO AL PASAR EL RATÓN
+========================================= */
+
+.navbar ul li a:hover {
+    background-color: #1e3a8a;
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   PÁGINA ACTUAL
+========================================= */
+
+/*
+   IMPORTANTE:
+   Ya NO usamos :first-child porque eso hacía
+   que "Inicio" estuviera siempre azul.
+
+   Ahora JavaScript añadirá la clase "activo"
+   al enlace correspondiente a la página actual.
+*/
+
+.navbar ul li a.activo {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 25px;
+
+    background:
+        linear-gradient(
+            rgba(30, 58, 138, 0.85),
+            rgba(37, 99, 235, 0.85)
+        );
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.boton {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: white;
+    color: #1e3a8a;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.25s ease;
+}
+
+.boton:hover {
+    background: #dbeafe;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.seccion {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 70px auto;
+}
+
+.seccion > h2 {
+    text-align: center;
+
+    color: #1e3a8a;
+
+    font-size: 32px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.tarjeta-imagen {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s ease;
+}
+
+
+.tarjeta-imagen:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.tarjeta-imagen img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.descripcion-imagen {
+    padding: 22px;
+}
+
+
+.descripcion-imagen h3 {
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+
+.descripcion-imagen p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+.resumen-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.resumen-item {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.resumen-item:hover {
+    transform: translateY(-5px);
+}
+
+
+.resumen-item h3 {
+    color: #1e3a8a;
+
+    margin-bottom: 15px;
+}
+
+
+.resumen-item p {
+    line-height: 1.6;
+
+    color: #555;
+
+    margin-bottom: 18px;
+}
+
+
+.enlace-interno {
+    color: #2563eb;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.enlace-interno:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FRASE DESTACADA
+========================================= */
+
+.destacada {
+    max-width: 900px;
+
+    text-align: center;
+}
+
+
+.destacada blockquote {
+    background: #1e3a8a;
+
+    color: white;
+
+    padding: 45px 35px;
+
+    border-radius: 15px;
+}
+
+
+.destacada blockquote p {
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+.destacada cite {
+    color: #dbeafe;
+
+    font-style: normal;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #172554;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 80px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar h1 {
+        font-size: 21px;
+    }
+
+    .navbar ul li a {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+
+    .resumen-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 900px) {
+
+    body {
+        padding-top: 70px;
+    }
+
+    header {
+        height: 70px;
+    }
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .navbar ul {
+        max-width: 60%;
+
+        overflow-x: auto;
+
+        scrollbar-width: thin;
+
+        justify-content: flex-start;
+    }
+
+    .navbar ul li {
+        flex-shrink: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .navbar {
+        gap: 10px;
+        padding: 0 12px;
+    }
+
+    .navbar ul {
+        max-width: 52%;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+        padding: 7px 6px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .resumen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        width: 92%;
+    }
+
+    .seccion > h2 {
+        font-size: 27px;
+    }
+}
