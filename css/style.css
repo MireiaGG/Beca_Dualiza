@@ -247,6 +247,26 @@ header {
     margin-bottom: 40px;
 }
 
+.seccion > a {
+
+    padding: 14px 28px;
+
+    text-align: center;
+
+    color: #ffffff;
+    background: #1e3a8a;
+    
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+    
+    margin-top: 20px;
+
+    transition: 0.25s ease;
+}
+
 
 /* =========================================
    GALERÍA
