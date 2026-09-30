@@ -264,7 +264,8 @@ header {
     
     margin-top: 20px;
 
-    transition: 0.25s ease;
+    margin-left: 40%;
+    transform: translatey(-2px);
 }
 
 
