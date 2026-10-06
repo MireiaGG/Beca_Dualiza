@@ -273,7 +273,7 @@ header {
    GALERÍA
 ========================================= */
 
-.iniproyecto-grid {
+.galeria-grid {
     display: grid;
 
     grid-template-columns:
@@ -283,7 +283,7 @@ header {
 }
 
 
-.tarjeta-imagen-proyecto {
+.tarjeta-imagen {
     background: white;
 
     border-radius: 12px;
@@ -297,7 +297,7 @@ header {
 }
 
 
-.tarjeta-imagen-proyecto:hover {
+.tarjeta-imagen:hover {
     transform: translateY(-6px);
 
     box-shadow:
@@ -305,7 +305,7 @@ header {
 }
 
 
-.tarjeta-imagen-proyecto img {
+.tarjeta-imagen img {
     width: 100%;
     height: 230px;
 
@@ -1331,4 +1331,36 @@ footer {
 /* =========================================================
    FIN GALERIA
    ========================================================= */
+.dualiza-hero-decoracion {
 
+    width: 350px;
+
+    height: 210px;
+
+    flex-shrink: 0;
+
+    margin-left: 40px;
+
+    overflow: hidden;
+
+    border-radius: 50% 35% 50% 35%;
+
+    transform: rotate(-2deg);
+
+    box-shadow:
+        0 10px 30px rgba(30, 58, 138, 0.12);
+
+}
+
+
+.dualiza-hero-decoracion img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
