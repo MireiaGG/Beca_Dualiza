@@ -1331,7 +1331,9 @@ footer {
 /* =========================================================
    FIN GALERIA
    ========================================================= */
-
+/* =========================================================
+   DUALIZA
+   ========================================================= */
 .dualiza-hero-decoracion {
 
     width: 350px;
@@ -1361,7 +1363,89 @@ footer {
     height: 100%;
 
     object-fit: cover;
-
+    margin: 0 auto;
     display: block;
 
 }
+
+.dualiza-titulo img{
+    width: 60%;
+    height: 60%;
+    display: block;
+    margin: 0 auto;
+
+    
+}
+
+.dualiza-seccion {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 45px auto;
+
+    padding: 25px 22px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(30, 58, 138, 0.06);
+
+}
+
+.dualiza-seccion-cabecera {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.dualiza-titulo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.dualiza-titulo h2 {
+
+    color: #1e3a8a;
+
+    font-size: 27px;
+
+    margin: 0 0 6px;
+
+}
+
+
+.dualiza-titulo p {
+
+    color: #55709b;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+}
+/* =========================================================
+   FIN DUALIZA
+   ========================================================= */
