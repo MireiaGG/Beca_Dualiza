@@ -247,6 +247,20 @@ header {
     margin-bottom: 40px;
 }
 
+.seccion > p {
+
+    color: #55709b;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    padding: 5px;
+
+    margin: 0;
+
+}
+
 .seccion > a {
 
     padding: 14px 28px;
@@ -1442,6 +1456,8 @@ footer {
     font-size: 18px;
 
     line-height: 1.6;
+
+    padding: 5px;
 
     margin: 0;
 
