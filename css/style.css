@@ -260,6 +260,19 @@ header {
     margin: 0;
 
 }
+.seccion > ul {
+
+    color: #55709b;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    padding: 5px;
+
+    margin: 0;
+
+}
 
 .seccion > a {
 
