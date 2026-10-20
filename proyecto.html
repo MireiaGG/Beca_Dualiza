@@ -32,12 +32,6 @@
                 <p>El objetivo de este proyecto principalmente se basa en
                 identificar un microorganismo simbionte encontrados conviviendo 
                 en unas corales junto a la biodiversidad marina en la litoral mediterránea.</p>
-
-                <p></p>El problema que se nos presentó fue que el análisis de estas muestras eran
-                muy tardías para 1 secuencia, y pues este mismo proceso se tenía que completar otras
-                7 veces de una simple ejecución. En caso de que el sistema en el que se está ejecutando 
-                ste script se apagase o sucediera cualquier cosa que influyera en el proceso, este no 
-                 completaba y se debía de volver a realizar desde 0.</p>
             </div>
 
             <div class="dualiza-hero-decoracion">
@@ -116,22 +110,23 @@
             <div class="dualiza-seccion-cabecera">
                 <div class="dualiza-titulo">
                     <div>
-                        <h2>Complicacones y soluciones</h2>
-                        <p>A lo largo del proyecto nos hemos tenido que enfrentar a varios inconvenientes los cuáles nos ha ralentizado en más
-                        de 1 ocasión, pues al final de todo, estos problemas están relacionados al servidor que disponíamos. Las primeras sorpresas
-                        se presentaron a la segunda semana después de empezar cada uno a analizar las muestras mediante un control de calidad como
-                        es en este caso FastQC.</p>
+                        <h2>Complicaciones y soluciones</h2>
+                        <p>A lo largo del proyecto nos hemos tenido que enfrentar a varios inconvenientes los cuáles nos ha
+                        ralentizado en más de 1 ocasión, estos problemas siendo bastante variados y algunos teniendo relación
+                        con el servidor que disponíamos.</p>
 
-                        <p>El problema que se nos presentó fue que el análisis de estas muestras eran muy tardías para 1 secuencia, y pues este mismo
-                        proceso se tenía que completar otras 7 veces de una simple ejecución. En caso de que el sistema en el que se está ejecutando
-                        este script se apagase o sucediera cualquier cosa que influyera en el proceso, este no se completaba y se debía de volver a
-                        realizar desde 0.</p>
-                        
-                        <p>La solución sencilla que podíamos encontrar era dejar ejecutando este script en segundo plano, ya que de esta forma,aunque
-                        el usuario quien lo haya iniciado se desconecte de la máquina, el script seguirá cumpliendo su función con sus procesos. Parece
-                        ser sencillo, pero cuando dejamos de hacer esto, seguían sin analizarse todas las secuencias, y las que en teoría deberían estar
-                        listas, estaban corrompidas/dañadas. A la vez que nos dimos cuenta de esto, también nos percatamos que habían momentos del dia en
-                        los que uno del grupo quería conectarse al servidor, pero este no respondía.</p>
+                        <p>Un primer problema surge de uno de las muestras, el de ARN (Ácido Ribonucleico), pues al intentar
+                        proceder con el control de calidad en este, algunos de los filtros principales no pasaba o daba fallo
+                        a causa del ARnr (Ácido Ribonucleico Ribosomal), coloquialmente conocido como "ruido", y que no aporta
+                        información relevante para identificarla. Tuvimos que realizar un filtrado de esta secuencia con la ayuda
+                        de un software llamado SortMeRNA, el cuál nos ayudó a eliminar este "ruido" comarandola con la base de datos
+                        de "SILVA" y poder continuar con el análisis.
+                        </p>
+
+                        <p>Siguiendo este camino se nos presentó otro problema. Al intentar ejecutar este programa en el servidor, 
+                        este último colapsaba, pues este programa requiere una gran cantidad de memoria RAM, y aunque nuestra máquina disponia
+                        de una cantidad bastante favorable, la ejecución de este seguia siendo demasiado.
+                        </p>
 
                         <p>En un inicio nos habían comentado que tendríamos un servidor siempre disponible, las 24h de los 7 días de la semana, pero al parecer
                         había algo que nos interrumpe con el progreso del análisis. Esto se debe a que al parecer en el instituto haban ciertos horarios los
