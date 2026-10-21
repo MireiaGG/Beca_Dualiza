@@ -113,13 +113,14 @@
                         <h2>Complicaciones y soluciones</h2>
                         <p>A lo largo del proyecto nos hemos tenido que enfrentar a varios inconvenientes los cuáles nos ha
                         ralentizado en más de 1 ocasión, estos problemas siendo bastante variados y algunos teniendo relación
-                        con el servidor que disponíamos.</p>
+                        con el servidor que disponíamos.</p><br>
 
+                        <h3>Primera difcultad</h3>
                         <p>Un primer problema surge de uno de las muestras, el de ARN (Ácido Ribonucleico), pues al intentar
                         proceder con el control de calidad en este, algunos de los filtros principales no pasaba o daba fallo
                         a causa del ARnr (Ácido Ribonucleico Ribosomal), coloquialmente conocido como "ruido", y que no aporta
                         información relevante para identificarla. Tuvimos que realizar un filtrado de esta secuencia con la ayuda
-                        de un software llamado SortMeRNA, el cuál nos ayudó a eliminar este "ruido" comarandola con la base de datos
+                        de un software llamado SortMeRNA, el cuál nos ayudó a eliminar este "ruido" comparandola con la base de datos
                         de "SILVA" y poder continuar con el análisis.
                         </p>
 
@@ -128,6 +129,21 @@
                         de una cantidad bastante favorable, la ejecución de este seguia siendo demasiado.
                         </p>
 
+                        <p>Para poder seguir con el proyecto, probamos distintas soluciones como ejecutar el programa con el uso de menos hilos
+                        de procesamiento o utilizar una base de datos más pequeña, hasta que llegamos a la conclusión de dividir la muestra en
+                        archivos más pequeños. Con este método, el servidor los iba procesando poco a poco y después unirlos nuevamente para 
+                        recuperar la muestra completa.  
+                        </p><br>
+
+                        <h3>Segunda dificultad</h3>
+                        <p>Surge cuando iniciamos los scripts para el filtraje de las muestras mediante el programa BBBDUK. Al parecer los archivos
+                        que se iban generando eran demasiados grandes y el directorio donde se almacenaban los resultados se estaba quedando sin
+                        espacio suficiente, haciendo que el proceso se interrumpiese y no se completase del todo, dejando 4 secuencas faltantes.
+                        </p>
+
+                        <p>Por esta vez, solo tuvimos que cambiar la ruta en donde se almacenarian los resultados a las secuencas restantes, y para
+                        liberar espacio, todos estos resultados los movimos al nuevo servidor todos juntos. Esto mismo hicimos con las otras muestras.
+                        </p>
                         <p>En un inicio nos habían comentado que tendríamos un servidor siempre disponible, las 24h de los 7 días de la semana, pero al parecer
                         había algo que nos interrumpe con el progreso del análisis. Esto se debe a que al parecer en el instituto haban ciertos horarios los
                         cuáles servían para actualizar y reiniciar sistemas, esto mismo hacia que el servidor se apagase y no nos podamos conectar.</p>
