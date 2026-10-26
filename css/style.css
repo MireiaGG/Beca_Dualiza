@@ -121,6 +121,20 @@ header {
         transform 0.25s ease;
 }
 
+.navbar .submenu {
+    display: none;
+    position: fixed;
+    list-style: none;
+    background-color: #e1f8fd;
+    border-radius: 7px;
+    padding: 0;
+    margin: 0;
+}
+.navbar .menu-item:hover > .submenu {
+    display: block;
+}
+
+
 
 /* =========================================
    EFECTO AL PASAR EL RATÓN
@@ -226,6 +240,18 @@ header {
 }
 
 
+.boton2 {
+    display: inline-block;
+
+    transition: 0.25s ease;
+}
+
+.boton2:hover {
+
+    transform: translateY(-2px);
+}
+
+
 /* =========================================
    SECCIONES
 ========================================= */
@@ -292,7 +318,6 @@ header {
     margin-top: 20px;
 
     margin-left: 40%;
-    transform: translatey(-2px);
 }
 
 
