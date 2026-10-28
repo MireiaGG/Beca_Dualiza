@@ -107,9 +107,10 @@ header {
     padding: 10px 9px;
 
     color: #333;
+    position: relative;
 
     text-decoration: none;
-
+    position: relative;
     font-size: 13px;
     font-weight: 600;
 
@@ -123,13 +124,14 @@ header {
 
 .navbar .submenu {
     display: none;
-    position: fixed;
-    list-style: none;
+    list-style:none;
+    top: 100%;
     background-color: #e1f8fd;
     border-radius: 7px;
     padding: 0;
     margin: 0;
 }
+
 .navbar .menu-item:hover > .submenu {
     display: block;
 }
