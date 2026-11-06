@@ -1567,3 +1567,23 @@ footer {
 /* =========================================================
    FIN DUALIZA
    ========================================================= */
+   .galeria-tit {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    color: #1e3a8a;
+
+}
+
+.galeria-ic {
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.galeria-contenido h2 {
+    margin: 0;
+}
+
+.galeria-contenido p {
+    margin-top: 15px;
+}
