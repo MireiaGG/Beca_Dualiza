@@ -1,23 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestro proyecto</title>
+
+    <meta name="description" content="Conoce las diferentes fases del proyecto de bioinformática Dualiza: formación, procesamiento de muestras y análisis genómico.">
+
+    <title>Procesos del proyecto | Proyecto Dualiza</title>
     <link rel="icon" href="img/adn.webp">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
     <header>
         <nav class="navbar">
             <h1>Proyecto Dualiza</h1>
+
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="dualiza.html">¿Qué es Dualiza?</a></li>
-                <li class="menu-item"><a href="proyecto.html" class="activo">Proyecto ▼</a>
-                    <ul class="submenu"><li><a href="dificultades.html">Dificultades</a></li></ul>
-                    <ul class="submenu"><li><a href="viaje.html">Viaje</a></li></ul>
+
+                <li class="menu-item">
+                    <a href="proyecto.html" class="activo">Proyecto ▼</a>
+
+                    <ul class="submenu">
+                        <li><a href="dificultades.html">Dificultades</a></li>
+                        <li><a href="viaje.html">Viaje</a></li>
+                    </ul>
                 </li>
+
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="quienes-somos.html">Quiénes somos</a></li>
             </ul>
@@ -26,87 +39,284 @@
 
     <main>
 
-        
+        <!-- PORTADA -->
         <section class="galeria-hero">
 
             <div class="galeria-hero-contenido">
                 <h2>Procesos del proyecto</h2>
 
-                <p>El objetivo de este proyecto principalmente se basa en
-                identificar un microorganismo simbionte encontrados conviviendo 
-                en unas corales junto a la biodiversidad marina en la litoral mediterránea.</p>
+                <p>
+                    El objetivo principal de este proyecto es estudiar e
+                    identificar posibles microorganismos asociados a corales
+                    del litoral mediterráneo mediante herramientas de
+                    biología molecular y bioinformática.
+                </p>
             </div>
 
             <div class="dualiza-hero-decoracion">
-                <img src="img/corales-proyecto.png" alt="Imagen representativa del proyecto"/>
+                <img
+                    src="img/corales-proyecto.png"
+                    alt="Imagen representativa de los corales estudiados"
+                >
             </div>
+
         </section>
 
+
+        <!-- FORMACIÓN -->
         <section class="dualiza-seccion">
+
             <div class="dualiza-seccion-cabecera">
                 <div class="dualiza-titulo">
-                    <div>
-                        <h2>Formación y aprendizaje previo al proyecto</h2>
 
-                        <p>Durante la primera fase del proyecto, se aprovechó para proporcionar
-                        una formación básica/intermedia a los integrantes del grupo Dualiza, sobre
-                        los temas de biología con el que estarán involucrados durante el procedimiento
-                        del desarrollo de la investigación de estos microorganismos no identificados.
-                        Este proceso de formación inicial proviene de:</p>
-            
-                        <ul>
-                            <li>El poco conocimiento biológico de parte de los participantes, el cual era importante para poder
-                            entender y adaptar los parámetros necesarios para poder llevar a cabo la investigación
-                            de manera correcta y eficiente. </li>
+                    <h2>Formación y preparación previa</h2>
 
-                            <li>La ausencia de los datos de estos microorganismos encontrados los cuáles sin esos
-                            no había posibilidad de análizar nada.</li>
-                        </ul>
+                    <p>
+                        Durante la primera fase del proyecto se proporcionó
+                        formación básica e intermedia a los integrantes
+                        del grupo Dualiza sobre los conceptos de biología
+                        y bioinformática necesarios para comprender el
+                        desarrollo de la investigación.
+                    </p>
 
-                        <p>Llegado el més de abril, Juan Anonio García Lopez, profesor a cargo de la investigación y del alumnado
-                        participante de este proyecto; y Luis Flores, alumno del grupo Dualiza, realizaron un viaje directo a la
-                        adquisición de muestras las cuales identifcaremos y clasificaremos de el Museo de Historia Natural de Viena (NHM).
-                        A lo largo de esa semana de viaje, nuestros representates conocieron y aprendieron varias cosas en aquel Museo donde
-                        aguardan datos y muestras de incluso 1 siglo de antigüedad. Paralelamente, se configuró servidores dedicados de forma
-                        segura mediante VPN (WireGuard), siendo este nuestra zona de trabajo.</p>
-                        <br>
-                    </div>
+                    <p>
+                        Esta preparación inicial fue especialmente
+                        importante por dos motivos:
+                    </p>
+
+                    <ul>
+                        <li>
+                            La necesidad de adquirir conocimientos
+                            biológicos que permitieran comprender las
+                            muestras y los procedimientos utilizados
+                            durante la investigación.
+                        </li>
+
+                        <li>
+                            La ausencia de información previa suficiente
+                            sobre los microorganismos estudiados, lo que
+                            hacía necesario obtener y analizar datos
+                            biológicos antes de poder avanzar en su
+                            identificación.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Esta etapa permitió establecer una base común
+                        de conocimientos para que los participantes
+                        pudieran comprender las diferentes fases del
+                        proyecto y colaborar en su desarrollo.
+                    </p>
+
                 </div>
             </div>
+
         </section>
 
+
+        <!-- VIAJE Y OBTENCIÓN DE MUESTRAS -->
         <section class="dualiza-seccion">
+
             <div class="dualiza-seccion-cabecera">
                 <div class="dualiza-titulo">
-                    <div>
-                        <h2>Procedimiento con las muestras</h2>
 
-                        <p> Esta etapa del proyecto fue hacer una fase inicial de control de calidad sobre las muestras donde analizamos
-                        las secuencias crudas R1 y R2 con FastQC para evaluar la calidad base a base, detectar adaptadores y corregir
-                        desequilibrios en el contenido de GC antes de iniciar cualquier manipulación.</p>
-            
-                        <p>Además del control de calidad, aplicamos un filtrado y limpieza de las muestras de ADN utilizando herramientas
-                        como BBDUK o FASTP. Comenzamos comparando la eficacia entre estos dos filtrajes, decantándonos por BBDUK por demostrar
-                        una mejor eliminación de falsos positivos que FASTP y después automatizamos el flujo mediante scripts en Bash para procesar
-                        lotes de muestras (DNA_001 a DNA_008) descartando lecturas de baja calidad y secuencias demasiado cortas (maq=28, minlen=100).</p>
+                    <h2>Obtención y estudio de las muestras</h2>
 
-                        <p>No nos olvidemos de el filtrado de las muestras de ARN, estas toman un camino diferente a las de ADN
-                        debido a la abundancia de ARNr, para ello tuvimos que aislar el ARN mensajero del ARN ribosómico(el ruido),
-                        empleando SortMeRNA junto a la base de datos SILVA. Tras enfrentarnos a bloqueos por falta de memoria RAM dada
-                        la densidad de los datos, fragmentamos las muestras para procesarlas por separado y optimizar los hilos de procesamiento.</p>
+                    <p>
+                        Durante el mes de abril, Juan Antonio García López,
+                        profesor responsable de la investigación, y Luis
+                        Flores, alumno participante del grupo Dualiza,
+                        realizaron un viaje al Museo de Historia Natural
+                        de Viena (NHM), donde se encontraban conservadas
+                        diferentes muestras biológicas de interés para
+                        el proyecto.
+                    </p>
 
-                        <p>El filtrado de las muestras de ARN toman un camino diferente a las de ADN debido a la abundancia de ARNr,
-                        para ello tuvimos que aislar el ARN mensajero del ARN ribosómico(el ruido), empleando SortMeRNA junto a la base
-                        de datos SILVA. Tras enfrentarnos a bloqueos por falta de memoria RAM dada la densidad de los datos, fragmentamos
-                        las muestras para procesarlas por separado y optimizar los hilos de procesamiento.</p>
+                    <p>
+                        A lo largo de esta estancia, los representantes
+                        del proyecto pudieron conocer parte de las
+                        colecciones científicas del museo, algunas de
+                        ellas formadas por ejemplares con más de un
+                        siglo de antigüedad. También tuvieron la
+                        oportunidad de aprender sobre los procedimientos
+                        de conservación, preparación y estudio de las
+                        muestras.
+                    </p>
 
-                        <p>Al tener complicaciones con el tema del espacio en los servdores, hicimos una reconstrucción genómica en servidor
-                        de alto rendimiento. Para ello transferimos las muestras limpias mediante SCP al servidor de cómputo (SuperDualiza).
-                        Iniciamos la reconstrucción de las secuencias sin genoma de referencia previo (de novo) probando ensambladores basados
-                        en grafos de de Bruijn (SPAdes y Velvet) y evaluando el rendimiento con múltiples valores de K-mers.</p>
-                    </div>
+                    <p>
+                        Paralelamente, se preparó el entorno informático
+                        de trabajo mediante la configuración de
+                        servidores dedicados y una conexión VPN
+                        segura basada en WireGuard. Esta infraestructura
+                        permitió disponer de un entorno remoto desde
+                        el que desarrollar las tareas de procesamiento
+                        bioinformático.
+                    </p>
+
                 </div>
             </div>
+
+        </section>
+
+
+        <!-- CONTROL DE CALIDAD Y FILTRADO -->
+        <section class="dualiza-seccion">
+
+            <div class="dualiza-seccion-cabecera">
+                <div class="dualiza-titulo">
+
+                    <h2>Control de calidad y procesamiento de ADN</h2>
+
+                    <p>
+                        Una vez disponibles los datos de secuenciación,
+                        se comenzó con una fase de control de calidad
+                        de las lecturas crudas de ADN, identificadas
+                        como R1 y R2. Para ello se utilizó FastQC,
+                        una herramienta que genera informes sobre
+                        diferentes características de las secuencias.
+                    </p>
+
+                    <p>
+                        Estos informes permitieron evaluar aspectos
+                        como la calidad por base, la distribución
+                        del contenido GC y la posible presencia de
+                        adaptadores o secuencias de baja calidad.
+                        De esta manera, fue posible conocer el estado
+                        inicial de los datos y determinar qué
+                        necesidades de filtrado presentaban.
+                    </p>
+
+                    <p>
+                        Posteriormente, se compararon dos herramientas
+                        de filtrado y limpieza de lecturas: BBDuk y
+                        fastp. Tras evaluar sus resultados, el equipo
+                        se decantó por BBDuk para continuar con el
+                        procesamiento de las muestras.
+                    </p>
+
+                    <p>
+                        Para facilitar el trabajo con diferentes
+                        muestras, se desarrollaron scripts en Bash
+                        que permitieron automatizar el procesamiento
+                        de los lotes de ADN, identificados desde
+                        DNA_001 hasta DNA_008.
+                    </p>
+
+                    <p>
+                        Entre los parámetros utilizados se encontraban
+                        <strong>maq=28</strong>, relacionado con la
+                        calidad media mínima de las lecturas, y
+                        <strong>minlen=100</strong>, que establecía
+                        una longitud mínima de 100 bases para conservar
+                        las secuencias.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FILTRADO DE ARN -->
+        <section class="dualiza-seccion">
+
+            <div class="dualiza-seccion-cabecera">
+                <div class="dualiza-titulo">
+
+                    <h2>Procesamiento de las muestras de ARN</h2>
+
+                    <p>
+                        Las muestras de ARN requirieron un procedimiento
+                        diferente al de las muestras de ADN. En este caso,
+                        uno de los objetivos era reducir la presencia
+                        de ARN ribosómico (ARNr), que podía representar
+                        una parte importante de las lecturas obtenidas
+                        y dificultar el análisis centrado en otros tipos
+                        de ARN, como el ARN mensajero.
+                    </p>
+
+                    <p>
+                        Para realizar este filtrado se utilizó
+                        SortMeRNA junto con la base de datos SILVA,
+                        que permite identificar secuencias de ARN
+                        ribosómico mediante su comparación con
+                        secuencias de referencia.
+                    </p>
+
+                    <p>
+                        Durante este procedimiento aparecieron
+                        dificultades relacionadas con el elevado
+                        consumo de memoria RAM. Para poder continuar,
+                        se dividieron las muestras en archivos más
+                        pequeños, de manera que pudieran procesarse
+                        por separado y reducir la carga de trabajo
+                        del servidor.
+                    </p>
+
+                    <p>
+                        Esta experiencia permitió comprender la
+                        importancia de adaptar los procedimientos
+                        bioinformáticos a los recursos disponibles
+                        y de planificar adecuadamente el procesamiento
+                        de grandes cantidades de datos.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ENSAMBLAJE -->
+        <section class="dualiza-seccion">
+
+            <div class="dualiza-seccion-cabecera">
+                <div class="dualiza-titulo">
+
+                    <h2>Reconstrucción y análisis de secuencias</h2>
+
+                    <p>
+                        Debido a las limitaciones de almacenamiento
+                        de los primeros servidores, fue necesario
+                        trasladar las muestras ya filtradas mediante
+                        SCP a un servidor de mayor capacidad de
+                        procesamiento, denominado SuperDualiza.
+                    </p>
+
+                    <p>
+                        Una vez transferidos los datos, se comenzó
+                        a trabajar en la reconstrucción de secuencias
+                        sin utilizar un genoma de referencia previo.
+                        Este procedimiento se conoce como ensamblaje
+                        <strong>de novo</strong>.
+                    </p>
+
+                    <p>
+                        Para llevar a cabo esta fase se probaron
+                        diferentes herramientas de ensamblaje,
+                        entre ellas SPAdes y Velvet, que utilizan
+                        grafos de de Bruijn para reconstruir
+                        secuencias a partir de fragmentos de ADN.
+                    </p>
+
+                    <p>
+                        También se evaluaron diferentes valores
+                        de K-mers, un parámetro que influye en
+                        la construcción de estos grafos y en
+                        el resultado del ensamblaje.
+                    </p>
+
+                    <p>
+                        Esta fase permitió avanzar desde las
+                        lecturas obtenidas mediante secuenciación
+                        hasta su reconstrucción en fragmentos
+                        más largos, que posteriormente pueden
+                        estudiarse e interpretarse.
+                    </p>
+
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -114,5 +324,6 @@
     <footer>
         <p>© 2026 Proyecto Dualiza</p>
     </footer>
+
 </body>
 </html>
