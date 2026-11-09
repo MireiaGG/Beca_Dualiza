@@ -1319,3 +1319,414 @@ button:focus-visible {
         font-size: 14px;
     }
 }
+
+/* =========================================================
+   14. ACABADO VISUAL UNIFICADO PARA TODAS LAS PÁGINAS
+   Ajustes de fondo, tarjetas, portadas y lectura
+   ========================================================= */
+
+:root {
+    --dualiza-azul-oscuro: #123653;
+    --dualiza-azul: #176b91;
+    --dualiza-azul-claro: #dceef5;
+    --dualiza-texto: #405466;
+    --dualiza-fondo: #f3f6f8;
+    --dualiza-borde: #e2eaf0;
+    --dualiza-blanco: #ffffff;
+}
+
+html {
+    background: var(--dualiza-fondo);
+}
+
+body {
+    background: var(--dualiza-fondo);
+    color: var(--dualiza-texto);
+}
+
+main {
+    min-height: 65vh;
+    background: linear-gradient(180deg, #f7f9fb 0%, #f0f4f7 100%);
+}
+
+/* Portadas interiores: mismo diseño en Dualiza, Proyecto,
+   Viaje, Dificultades, Galería y Quiénes somos. */
+.galeria-hero {
+    min-height: 300px;
+    padding: 58px max(6%, calc((100% - 1180px) / 2));
+    color: #fff;
+    background: linear-gradient(120deg, #102f49 0%, #155d80 58%, #197b9c 100%);
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 12px 30px rgba(16, 47, 73, .12);
+}
+
+/* La portada de equipo utiliza exactamente la misma base. */
+.galeria-hero.equipo-hero {
+    background: linear-gradient(120deg, #102f49 0%, #155d80 58%, #197b9c 100%);
+}
+
+.galeria-hero::before {
+    content: "";
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    top: -245px;
+    right: 12%;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.galeria-hero-contenido {
+    max-width: 700px;
+}
+
+.galeria-hero h2 {
+    color: #fff;
+    font-size: clamp(2.1rem, 4.5vw, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -.8px;
+}
+
+.galeria-hero p {
+    max-width: 680px;
+    color: rgba(255, 255, 255, .88);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.galeria-etiqueta,
+.equipo-etiqueta {
+    color: #a9e2f0;
+    font-size: .76rem;
+    letter-spacing: 2.2px;
+}
+
+.galeria-hero-decoracion,
+.dualiza-hero-decoracion {
+    position: relative;
+    z-index: 1;
+    width: 310px;
+    max-width: 36%;
+    height: 220px;
+    margin-left: 42px;
+    border: 1px solid rgba(255, 255, 255, .24);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .10);
+    box-shadow: 0 14px 34px rgba(5, 25, 40, .20);
+}
+
+.galeria-hero-decoracion img,
+.dualiza-hero-decoracion img {
+    border-radius: 23px;
+}
+
+/* El logo se muestra entero, sin recortarlo. */
+.dualiza-hero-decoracion img[src*="logo"] {
+    object-fit: contain;
+    padding: 22px;
+    background: rgba(255, 255, 255, .94);
+}
+
+/* Fondo general del contenido: limpio, sin bloques azules intensos. */
+.seccion {
+    margin: 58px auto;
+    padding: 0;
+}
+
+.seccion > h2 {
+    margin-bottom: 32px;
+    color: var(--dualiza-azul-oscuro);
+    font-size: clamp(1.7rem, 3vw, 2.15rem);
+}
+
+.seccion > p,
+.seccion > ul {
+    color: var(--dualiza-texto);
+}
+
+/* Secciones de texto: panel blanco suave sobre fondo gris azulado. */
+.dualiza-seccion,
+.galeria-seccion {
+    width: min(90%, 1160px);
+    margin: 38px auto;
+    padding: clamp(24px, 4vw, 42px);
+    background: #fff;
+    border: 1px solid var(--dualiza-borde);
+    border-radius: 20px;
+    box-shadow: 0 8px 26px rgba(28, 57, 78, .055);
+}
+
+.dualiza-seccion + .dualiza-seccion {
+    margin-top: 28px;
+}
+
+.dualiza-seccion .dualiza-titulo h2,
+.galeria-titulo h2 {
+    color: var(--dualiza-azul-oscuro);
+}
+
+.dualiza-seccion .dualiza-titulo h2 {
+    position: relative;
+    margin-bottom: 22px;
+    padding-bottom: 13px;
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+}
+
+.dualiza-seccion .dualiza-titulo h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 54px;
+    height: 3px;
+    background: #4aa5c2;
+    border-radius: 5px;
+}
+
+.dualiza-seccion .dualiza-titulo h3 {
+    margin-top: 25px;
+    color: var(--dualiza-azul);
+}
+
+.dualiza-seccion .dualiza-titulo p,
+.dualiza-seccion .dualiza-titulo ul {
+    color: #4d6070;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.dualiza-seccion .dualiza-titulo strong {
+    color: var(--dualiza-azul-oscuro);
+}
+
+.dualiza-seccion .dualiza-titulo li::marker {
+    color: #3995b5;
+}
+
+.dualiza-seccion .dualiza-titulo img {
+    border-radius: 15px;
+    box-shadow: 0 8px 22px rgba(20, 52, 73, .10);
+}
+
+/* Tarjetas de la página de inicio. */
+.tarjeta-imagen-proyecto,
+.resumen-item {
+    background: #fff;
+    border: 1px solid var(--dualiza-borde);
+    border-radius: 17px;
+    box-shadow: 0 7px 22px rgba(28, 57, 78, .06);
+}
+
+.tarjeta-imagen-proyecto:hover,
+.resumen-item:hover {
+    border-color: #c8dce7;
+    box-shadow: 0 13px 28px rgba(28, 57, 78, .10);
+}
+
+.descripcion-imagen h3,
+.resumen-item h3 {
+    color: var(--dualiza-azul-oscuro);
+}
+
+.descripcion-imagen p,
+.resumen-item p {
+    color: #536575;
+    line-height: 1.75;
+}
+
+.boton2,
+.seccion > a {
+    border-radius: 9px;
+}
+
+/* Galería: superficies claras y uniformes. */
+.foto-card,
+.video-card {
+    border: 1px solid var(--dualiza-borde);
+    border-radius: 13px;
+    box-shadow: 0 5px 17px rgba(28, 57, 78, .06);
+}
+
+.pie-foto strong {
+    color: var(--dualiza-azul-oscuro);
+}
+
+.pie-foto span {
+    color: #667887;
+}
+
+.cantidad-fotos {
+    color: var(--dualiza-azul);
+    background: #edf6f9;
+    border-color: #d4e8ef;
+}
+
+/* Quiénes somos: misma paleta y fondos que el resto. */
+.equipo-intro h2,
+.equipo-card-cabecera h3,
+.equipo-final h2 {
+    color: var(--dualiza-azul-oscuro);
+}
+
+.equipo-intro p,
+.equipo-card-contenido p,
+.equipo-final p {
+    color: #536575;
+}
+
+.equipo-card {
+    border-color: var(--dualiza-borde);
+    border-radius: 18px;
+    box-shadow: 0 7px 22px rgba(28, 57, 78, .06);
+}
+
+.equipo-final {
+    background: #fff;
+    border: 1px solid var(--dualiza-borde);
+    box-shadow: 0 8px 26px rgba(28, 57, 78, .055);
+}
+
+.equipo-datos strong {
+    color: #fff;
+}
+
+.equipo-datos span {
+    color: rgba(255, 255, 255, .78);
+}
+
+/* Menú: el repositorio tiene páginas con dos listas de submenú separadas.
+   Este ajuste evita que se superpongan. Si hay una sola lista, no afecta. */
+.navbar .menu-item > .submenu + .submenu {
+    top: calc(100% + 42px);
+}
+
+/* Pie común. */
+footer {
+    margin-top: 65px;
+    background: #102f49;
+}
+
+/* Ajustes responsive. */
+@media (max-width: 900px) {
+    .galeria-hero {
+        min-height: 0;
+        padding: 44px 6%;
+    }
+
+    .galeria-hero-decoracion,
+    .dualiza-hero-decoracion {
+        max-width: 40%;
+        margin-left: 24px;
+    }
+
+    .dualiza-seccion,
+    .galeria-seccion {
+        width: 92%;
+        margin: 28px auto;
+        padding: 26px;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        background: #f3f6f8;
+    }
+
+    .galeria-hero {
+        display: block;
+        padding: 40px 6%;
+        border-radius: 0 0 22px 22px;
+    }
+
+    .galeria-hero h2 {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+    }
+
+    .galeria-hero p {
+        font-size: .98rem;
+    }
+
+    .galeria-hero-decoracion,
+    .dualiza-hero-decoracion {
+        width: 100%;
+        max-width: 100%;
+        height: 185px;
+        margin: 26px 0 0;
+    }
+
+    .dualiza-seccion,
+    .galeria-seccion {
+        width: 92%;
+        margin: 24px auto;
+        padding: 22px 19px;
+        border-radius: 16px;
+    }
+
+    .dualiza-seccion .dualiza-titulo p,
+    .dualiza-seccion .dualiza-titulo ul {
+        font-size: .95rem;
+        line-height: 1.8;
+    }
+
+    .equipo-intro {
+        margin: 42px auto 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .dualiza-seccion,
+    .galeria-seccion {
+        width: 94%;
+        padding: 20px 16px;
+    }
+
+    .galeria-hero-decoracion,
+    .dualiza-hero-decoracion {
+        height: 165px;
+    }
+}
+
+
+/* =========================================================
+   IMAGEN DE CAIXABANK DUALIZA: OCUPA TODO EL RECUADRO
+   ========================================================= */
+
+.dualiza-hero-decoracion {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    border-radius: 24px;
+}
+
+.dualiza-hero-decoracion img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border-radius: 24px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 700px) {
+    .dualiza-hero-decoracion {
+        width: 100%;
+        height: 185px;
+        margin: 26px 0 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .dualiza-hero-decoracion {
+        height: 165px;
+    }
+}
