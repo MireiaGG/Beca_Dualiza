@@ -116,11 +116,6 @@ header {
     display: flex;
 }
 
-/* Algunas páginas tienen un submenú por enlace en lugar de uno conjunto. */
-.navbar .menu-item > .submenu + .submenu {
-    top: calc(100% + 42px);
-}
-
 .navbar .submenu li {
     width: 100%;
 }
@@ -139,19 +134,59 @@ header {
     transform: none;
 }
 
-/* 3. PORTADA DE INICIO */
+/* 3. PORTADA DE INICIO CON VÍDEO */
 .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
     min-height: 500px;
     padding: 70px 25px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: #fff;
     text-align: center;
-    background: linear-gradient(rgba(30, 58, 138, .85), rgba(37, 99, 235, .85));
+
+    /* Color de reserva si el vídeo no se carga */
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+/* Vídeo que ocupa todo el fondo de la portada */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+
+    /* Mantiene la proporción 16:9 y cubre toda la portada */
+    width: max(100%, 177.78vh);
+    height: max(100%, 56.25vw);
+    border: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Filtro azul para conservar la identidad visual y facilitar la lectura */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+        135deg,
+        rgba(30, 58, 138, .72),
+        rgba(37, 99, 235, .58)
+    );
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
+
     width: 100%;
     max-width: 850px;
 }
@@ -167,28 +202,11 @@ header {
     line-height: 1.7;
 }
 
-.boton,
-.boton2 {
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-    transition: .25s ease;
-}
-
-.boton {
-    padding: 14px 28px;
-    color: #1e3a8a;
-    background: #fff;
-    border-radius: 8px;
-}
-
-.boton:hover {
-    background: #dbeafe;
-    transform: translateY(-2px);
-}
-
-.boton2:hover {
-    transform: translateY(-2px);
+/* Si se ha activado reducir movimiento, se mantiene el fondo azul */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video {
+        display: none;
+    }
 }
 
 /* 4. SECCIONES GENERALES DE INICIO */
@@ -1230,5 +1248,74 @@ button:focus-visible {
 
     .dualiza-hero-decoracion {
         height: 165px;
+    }
+}
+
+
+/* BOTÓN DE LA PORTADA: CONOCE NUESTRO PROYECTO */
+.hero .boton {
+    display: inline-block;
+    padding: 14px 28px;
+    color: #1e3a8a;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.hero .boton:hover,
+.hero .boton:focus-visible {
+    color: #fff;
+    background: #1e3a8a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .22);
+}
+
+/* SUBMENÚ PROYECTO: AMBAS OPCIONES EN UN SOLO DESPLEGABLE */
+.navbar .menu-item {
+    position: relative;
+}
+
+.navbar .menu-item > .submenu {
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    padding: 8px;
+    gap: 2px;
+}
+
+.navbar .menu-item:hover > .submenu,
+.navbar .menu-item:focus-within > .submenu {
+    display: flex;
+}
+
+.navbar .submenu a {
+    display: block;
+    padding: 11px 14px;
+    color: #1e3a8a;
+    background: transparent;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.navbar .submenu a:hover,
+.navbar .submenu a:focus-visible {
+    color: #1e3a8a;
+    background: #dbeafe;
+}
+
+@media (max-width: 900px) {
+    .navbar > ul {
+        overflow: visible;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero .boton {
+        padding: 12px 22px;
+        font-size: 14px;
     }
 }

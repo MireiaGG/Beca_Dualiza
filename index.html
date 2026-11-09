@@ -9,228 +9,182 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
 <body>
-
-    <!-- =========================
-         CABECERA
-    ========================== -->
+    <!-- CABECERA -->
     <header>
         <nav class="navbar">
             <h1>Proyecto Dualiza</h1>
+
             <ul>
                 <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="dualiza.html">¿Qué es Dualiza?</a></li>
-                <li class="menu-item"><a href="proyecto.html">Proyecto ▼</a>
-                    <ul class="submenu"><li><a href="dificultades.html">Dificultades</a></li></ul>
-                    <ul class="submenu"><li><a href="viaje.html">Viaje</a></li></ul>
+
+                <li class="menu-item">
+                    <a href="proyecto.html">Proyecto ▼</a>
+                    <ul class="submenu">
+                        <li><a href="dificultades.html">Dificultades</a></li>
+                        <li><a href="viaje.html">Viaje</a></li>
+                    </ul>
                 </li>
+
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="quienes-somos.html">Quiénes somos</a></li>
             </ul>
         </nav>
     </header>
 
-
     <main>
-
-        <!-- =========================
-             HERO
-        ========================== -->
+        <!-- PORTADA CON VÍDEO EN BUCLE -->
         <section class="hero">
 
-            <div class="hero-content">
+            <iframe
+                class="hero-video"
+                src="https://www.youtube-nocookie.com/embed/RYqJFvjLJHc?autoplay=1&mute=1&loop=1&playlist=RYqJFvjLJHc&controls=0&rel=0&playsinline=1&modestbranding=1"
+                title="Vídeo de presentación del Proyecto Dualiza"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"
+                aria-hidden="true"
+                tabindex="-1"
+            ></iframe>
 
+            <div class="hero-content">
                 <h2>Proyecto Bioinformática</h2>
 
                 <p>
-                    En colaboración con el programa de 
+                    En colaboración con el programa de
                     <strong>Dualiza</strong> de CaixaBank,
                     hemos trabajado en un proyecto de bioinformática
                     con el objetivo de analizar e identificar un nuevo
                     microorganismo no identificado que convive en corales
-                    en la litoral del mediterraneo. 
+                    en el litoral del Mediterráneo.
                 </p>
 
                 <a href="#primer-vistazo" class="boton">
                     Conoce nuestro proyecto
                 </a>
-
             </div>
 
         </section>
 
-
-        <!-- =========================
-             GALERÍA DE PRESENTACIÓN
-        ========================== -->
+        <!-- GALERÍA DE PRESENTACIÓN -->
         <section class="seccion primer-vistazo" id="primer-vistazo">
-
             <h2>¿Qué vas a conocer?</h2>
 
             <div class="iniproyecto-grid">
 
                 <div class="tarjeta-imagen-proyecto">
-
                     <img
                         src="img/coral.webp"
-                        alt="Momento del inicio del proyecto Bioinformática"
+                        alt="Coral relacionado con el proyecto de bioinformática"
                     >
 
                     <div class="descripcion-imagen">
-
                         <h3>Objetivo del Proyecto</h3>
-
                         <p>
-                            El objetivo princial del proyecto es identificar
-                            el microorganismo NO identificado encontrado conviviendo
-                            en simbiosis junto a unos corales en la litoral mediterránea,
-                            analizando las muestras y comparándola junto las de una base de datos.
+                            El objetivo principal del proyecto es identificar
+                            el microorganismo no identificado encontrado conviviendo
+                            en simbiosis con unos corales del litoral mediterráneo,
+                            analizando las muestras y comparándolas con las de una
+                            base de datos.
                         </p>
-
                     </div>
-
                 </div>
 
-
                 <div class="tarjeta-imagen-proyecto">
-
                     <img
                         src="img/codigo.png"
-                        alt="Trabajo en equipo durante el desarrollo"
+                        alt="Trabajo de análisis y programación durante el proyecto"
                     >
 
                     <div class="descripcion-imagen">
-
                         <h3>Proceso de trabajo</h3>
-
                         <p>
                             Para llevar a cabo el proyecto, las muestras obtenidas
-                            se debian de pasar por un filtraje para conseguir datos
-                            más concretos
+                            se sometieron a un proceso de filtrado para conseguir
+                            datos más concretos.
                         </p>
-
                     </div>
-
                 </div>
 
-
                 <div class="tarjeta-imagen-proyecto">
-
                     <img
                         src="img/error.avif"
-                        alt="Presentación final del proyecto"
+                        alt="Dificultades encontradas durante el desarrollo del proyecto"
                     >
 
                     <div class="descripcion-imagen">
-
                         <h3>Dificultades y soluciones</h3>
-
                         <p>
-                            Complicaciones que nos han dificultado el desarrollo del proyecto
-                            y como los hemos podido sobrellevar y solucionar.
+                            Conoce las complicaciones que dificultaron el desarrollo
+                            del proyecto y cómo conseguimos afrontarlas y solucionarlas.
                         </p>
-
                     </div>
-
                 </div>
 
             </div>
 
-
             <a href="proyecto.html" class="boton2">
-                Proyecto Completo
+                Proyecto completo
             </a>
-
         </section>
 
-
-        <!-- =========================
-             RESUMEN
-        ========================== -->
+        <!-- RESUMEN -->
         <section class="seccion resumen">
-
             <h2>¿Qué vamos a encontrar aquí?</h2>
 
             <div class="resumen-grid">
 
                 <div class="resumen-item">
-
-                    <h3>📋 ¿Que es Dualiza?</h3>
-
+                    <h3>📋 ¿Qué es Dualiza?</h3>
                     <p>
-                        Conoce un poco de la empresa que nos brindó
-                        essta oportunidad, y como sutggió este proyecto.
-
+                        Conoce un poco más sobre la entidad que nos brindó
+                        esta oportunidad y cómo surgió el proyecto.
                     </p>
-
                     <a href="dualiza.html" class="enlace-interno">
                         Leer más →
                     </a>
-
                 </div>
 
-
                 <div class="resumen-item">
-
                     <h3>🔄 Procesos del Proyecto</h3>
-
                     <p>
-                        Descubre nuestro recorrido: Desde el inicio
-                        incluyendo nuestros errores y 
-                        difiicultades a lo largo del proyecto.
+                        Descubre nuestro recorrido desde el inicio, incluyendo
+                        los errores y las dificultades que encontramos durante
+                        el proyecto.
                     </p>
-
                     <a href="proyecto.html" class="enlace-interno">
                         Leer más →
                     </a>
-
                 </div>
 
-
                 <div class="resumen-item">
-
-                    <h3>📸 Galeria del Proyecto</h3>
-
+                    <h3>📸 Galería del Proyecto</h3>
                     <p>
-                        Una galeria con todas las imágenes hechas en relación
-                        al proyecto, incluyendo el dia de su presentación a colaboradores.
+                        Explora las imágenes relacionadas con el proyecto,
+                        incluida la presentación a nuestros colaboradores.
                     </p>
-
                     <a href="galeria.html" class="enlace-interno">
                         Leer más →
                     </a>
-
                 </div>
 
-
                 <div class="resumen-item">
-
                     <h3>👥 Nuestro equipo</h3>
-
                     <p>
-                        Conoce un poco más a las personas que hicieron posible este
-                        proyecto y sus roles dentro del equipo.
+                        Conoce a las personas que hicieron posible este
+                        proyecto y sus funciones dentro del equipo.
                     </p>
-
                     <a href="quienes-somos.html" class="enlace-interno">
                         Leer más →
                     </a>
-
                 </div>
 
             </div>
-
         </section>
 
-
-        <!-- =========================
-             FRASE DESTACADA
-        ========================== -->
+        <!-- FRASE DESTACADA -->
         <section class="seccion destacada">
-
             <blockquote>
-
                 <p>
                     "Dualiza nos ha dado la oportunidad de aprender haciendo,
                     de equivocarnos y mejorar, y sobre todo, de descubrir lo que
@@ -240,25 +194,15 @@
                 <cite>
                     — Equipo Dualiza, Instituto Puig Castellar
                 </cite>
-
             </blockquote>
-
         </section>
-
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- PIE DE PÁGINA -->
     <footer>
-
         <p>
             © 2026 Proyecto Dualiza — Instituto Puig Castellar
         </p>
-
     </footer>
-
-
 </body>
 </html>
