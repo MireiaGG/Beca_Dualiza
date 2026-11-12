@@ -686,6 +686,12 @@ header {
     margin-top: 35px;
 }
 
+.izquierda {
+    width: 45%;
+    float: left;
+    margin-right: 10px;
+}
+
 /* 9. PÁGINA QUIÉNES SOMOS */
 .equipo-hero {
     background: linear-gradient(110deg, #eff6ff, #dbeafe);
