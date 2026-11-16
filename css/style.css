@@ -675,10 +675,10 @@ header {
 
 .dualiza-seccion .dualiza-titulo img {
     display: block;
-    width: 60%;
+    width: 70%;
     max-width: 100%;
     height: auto;
-    margin: 25px auto;
+    margin: 15px auto;
     border-radius: 10px;
 }
 
@@ -687,9 +687,17 @@ header {
 }
 
 .izquierda {
-    width: 45%;
+    width: 35%;
+    height: auto;
     float: left;
     margin-right: 10px;
+}
+
+.derecha {
+    width: 35%;
+    height: auto;
+    float: right;
+    margin-left: 10px;
 }
 
 /* 9. PÁGINA QUIÉNES SOMOS */
