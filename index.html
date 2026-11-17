@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto de bioinformática desarrollado en el marco de la Beca Dualiza para investigar microorganismos asociados a corales.">
+
     <link rel="icon" href="img/adn.png">
     <title>Inicio - Proyecto Dualiza</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <!-- CABECERA -->
     <header>
         <nav class="navbar">
@@ -34,7 +36,8 @@
     </header>
 
     <main>
-        <!-- PORTADA CON VÍDEO EN BUCLE -->
+
+        <!-- PORTADA CON EL VÍDEO DE FONDO -->
         <section class="hero">
 
             <iframe
@@ -44,165 +47,233 @@
                 allow="autoplay; encrypted-media; picture-in-picture"
                 referrerpolicy="strict-origin-when-cross-origin"
                 aria-hidden="true"
-                tabindex="-1"
-            ></iframe>
+                tabindex="-1">
+            </iframe>
 
             <div class="hero-content">
-                <h2>Proyecto Bioinformática</h2>
-
-                <p>
-                    En colaboración con el programa de
-                    <strong>Dualiza</strong> de CaixaBank,
-                    hemos trabajado en un proyecto de bioinformática
-                    con el objetivo de analizar e identificar un nuevo
-                    microorganismo no identificado que convive en corales
-                    en el litoral del Mediterráneo.
-                </p>
-
-                <a href="#primer-vistazo" class="boton">
-                    Conoce nuestro proyecto
+                <h2>Proyecto de Bioinformática</h2>
+                <a href="#apartados" class="boton">
+                    Descubre el proyecto
                 </a>
             </div>
 
         </section>
 
-        <!-- GALERÍA DE PRESENTACIÓN -->
-        <section class="seccion primer-vistazo" id="primer-vistazo">
-            <h2>¿Qué vas a conocer?</h2>
 
-            <div class="iniproyecto-grid">
+        <!-- COLABORADORES -->
+    <section class="colaboradores">
 
-                <div class="tarjeta-imagen-proyecto">
-                    <img
-                        src="img/coral.webp"
-                        alt="Coral relacionado con el proyecto de bioinformática"
-                    >
+        <p class="colaboradores-titulo">
+            EN COLABORACIÓN CON
+        </p>
 
-                    <div class="descripcion-imagen">
-                        <h3>Objetivo del Proyecto</h3>
-                        <p>
-                            El objetivo principal del proyecto es identificar
-                            el microorganismo no identificado encontrado conviviendo
-                            en simbiosis con unos corales del litoral mediterráneo,
-                            analizando las muestras y comparándolas con las de una
-                            base de datos.
-                        </p>
-                    </div>
+        <div class="colaboradores-lista">
+            <img 
+                src="img/logosInicio.png" 
+                alt="Logotipos de FPEmpresa, CaixaBank e IES Sierra de Guara"
+                class="logos-colaboradores"
+            >
+        </div>
+
+    </section>      
+
+
+        <!-- CARRUSEL DE APARTADOS -->
+        <section class="seccion apartados-inicio" id="apartados">
+
+            <div class="apartados-cabecera">
+                <div>
+                    <span class="apartados-etiqueta">EXPLORA LA WEB</span>
+                    <h2>Conoce nuestro proyecto</h2>
+                    <p>
+                        Descubre las diferentes partes de nuestro trabajo
+                        y todo lo que hemos vivido durante el proyecto.
+                    </p>
                 </div>
 
-                <div class="tarjeta-imagen-proyecto">
-                    <img
-                        src="img/codigo.png"
-                        alt="Trabajo de análisis y programación durante el proyecto"
-                    >
+                <div class="carrusel-controles">
+                    <button type="button" id="anterior" aria-label="Apartado anterior">
+                        &#8592;
+                    </button>
+                    <button type="button" id="siguiente" aria-label="Apartado siguiente">
+                        &#8594;
+                    </button>
+                </div>
+            </div>
 
-                    <div class="descripcion-imagen">
-                        <h3>Proceso de trabajo</h3>
+
+            <div class="carrusel-contenedor" id="carrusel">
+
+                <a href="dualiza.html" class="apartado-card">
+                    <span class="apartado-numero">01</span>
+                    <div class="apartado-contenido">
+                        <span>EL PROGRAMA</span>
+                        <h3>¿Qué es Dualiza?</h3>
                         <p>
-                            Para llevar a cabo el proyecto, las muestras obtenidas
-                            se sometieron a un proceso de filtrado para conseguir
-                            datos más concretos.
+                            Conoce el programa que hizo posible
+                            esta experiencia educativa.
                         </p>
+                        <strong>Descubrir apartado →</strong>
                     </div>
+                </a>
+
+
+                <a href="proyecto.html" class="apartado-card apartado-proyecto">
+                    <span class="apartado-numero">02</span>
+                    <div class="apartado-contenido">
+                        <span>INVESTIGACIÓN</span>
+                        <h3>El proyecto</h3>
+                        <p>
+                            Descubre el objetivo de nuestra investigación
+                            y los procedimientos realizados.
+                        </p>
+                        <strong>Descubrir apartado →</strong>
+                    </div>
+                </a>
+
+
+                <a href="dificultades.html" class="apartado-card apartado-dificultades">
+                    <span class="apartado-numero">03</span>
+                    <div class="apartado-contenido">
+                        <span>APRENDIZAJE</span>
+                        <h3>Dificultades</h3>
+                        <p>
+                            Los problemas que encontramos y cómo
+                            conseguimos resolverlos.
+                        </p>
+                        <strong>Descubrir apartado →</strong>
+                    </div>
+                </a>
+
+
+                <a href="viaje.html" class="apartado-card apartado-viaje">
+                    <span class="apartado-numero">04</span>
+                    <div class="apartado-contenido">
+                        <span>EXPERIENCIA</span>
+                        <h3>El viaje</h3>
+                        <p>
+                            Una parte importante de nuestra experiencia
+                            fuera del aula.
+                        </p>
+                        <strong>Descubrir apartado →</strong>
+                    </div>
+                </a>
+
+
+                <a href="galeria.html" class="apartado-card apartado-galeria">
+                    <span class="apartado-numero">05</span>
+                    <div class="apartado-contenido">
+                        <span>RECUERDOS</span>
+                        <h3>Galería</h3>
+                        <p>
+                            Fotografías y momentos destacados
+                            de todo el proyecto.
+                        </p>
+                        <strong>Descubrir apartado →</strong>
+                    </div>
+                </a>
+
+
+                <a href="quienes-somos.html" class="apartado-card apartado-equipo">
+                    <span class="apartado-numero">06</span>
+                    <div class="apartado-contenido">
+                        <span>PARTICIPANTES</span>
+                        <h3>Quiénes somos</h3>
+                        <p>
+                            Conoce al equipo que ha participado
+                            en esta investigación.
+                        </p>
+                        <strong>Descubrir apartado →</strong>
+                    </div>
+                </a>
+
+            </div>
+
+            <p class="carrusel-ayuda">
+                Desliza para descubrir todos los apartados
+            </p>
+
+        </section>
+
+
+        <!-- MEMORIA DEL PROYECTO -->
+        <section class="memoria-seccion">
+
+            <div class="memoria-contenido">
+
+                <div class="memoria-texto">
+                    <span>DOCUMENTACIÓN</span>
+                    <h2>Memoria del proyecto</h2>
+
+                    <p>
+                        En este documento recogeremos el desarrollo
+                        completo de nuestra investigación, los
+                        procedimientos realizados y los resultados
+                        obtenidos.
+                    </p>
+
+                    <span class="memoria-estado">
+                        Disponible próximamente
+                    </span>
                 </div>
 
-                <div class="tarjeta-imagen-proyecto">
-                    <img
-                        src="img/error.avif"
-                        alt="Dificultades encontradas durante el desarrollo del proyecto"
-                    >
-
-                    <div class="descripcion-imagen">
-                        <h3>Dificultades y soluciones</h3>
-                        <p>
-                            Conoce las complicaciones que dificultaron el desarrollo
-                            del proyecto y cómo conseguimos afrontarlas y solucionarlas.
-                        </p>
-                    </div>
+                <div class="memoria-documento">
+                    <div class="memoria-pdf">PDF</div>
+                    <strong>Memoria Dualiza</strong>
+                    <span>Documento completo del proyecto</span>
                 </div>
 
             </div>
 
-            <a href="proyecto.html" class="boton2">
-                Proyecto completo
-            </a>
         </section>
 
-        <!-- RESUMEN -->
-        <section class="seccion resumen">
-            <h2>¿Qué vamos a encontrar aquí?</h2>
 
-            <div class="resumen-grid">
-
-                <div class="resumen-item">
-                    <h3>¿Qué es Dualiza?</h3>
-                    <p>
-                        Conoce un poco más sobre la entidad que nos brindó
-                        esta oportunidad y cómo surgió el proyecto.
-                    </p>
-                    <a href="dualiza.html" class="enlace-interno">
-                        Leer más →
-                    </a>
-                </div>
-
-                <div class="resumen-item">
-                    <h3>Procesos del Proyecto</h3>
-                    <p>
-                        Descubre nuestro recorrido desde el inicio, incluyendo
-                        los errores y las dificultades que encontramos durante
-                        el proyecto.
-                    </p>
-                    <a href="proyecto.html" class="enlace-interno">
-                        Leer más →
-                    </a>
-                </div>
-
-                <div class="resumen-item">
-                    <h3>Galería del Proyecto</h3>
-                    <p>
-                        Explora las imágenes relacionadas con el proyecto,
-                        incluida la presentación a nuestros colaboradores.
-                    </p>
-                    <a href="galeria.html" class="enlace-interno">
-                        Leer más →
-                    </a>
-                </div>
-
-                <div class="resumen-item">
-                    <h3>Nuestro equipo</h3>
-                    <p>
-                        Conoce a las personas que hicieron posible este
-                        proyecto y sus funciones dentro del equipo.
-                    </p>
-                    <a href="quienes-somos.html" class="enlace-interno">
-                        Leer más →
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- FRASE DESTACADA -->
-        <section class="seccion destacada">
-            <blockquote>
-                <p>
-                    "Dualiza nos ha dado la oportunidad de aprender haciendo,
-                    de equivocarnos y mejorar, y sobre todo, de descubrir lo que
-                    somos capaces de lograr como equipo."
-                </p>
-
-                <cite>
+        <!-- FRASE FINAL DEL EQUIPO -->
+        <section class="frase-final">
+            <div class="frase-final-contenido">
+                <span class="frase-etiqueta">UNA EXPERIENCIA QUE NOS LLEVAMOS</span>
+                <blockquote>
+                    “Dualiza nos ha dado la oportunidad de aprender haciendo,
+                    de equivocarnos y mejorar, y sobre todo, de descubrir lo
+                    que somos capaces de lograr como equipo.”
+                </blockquote>
+                <p class="firma-frase">
                     — Equipo Dualiza, Instituto Puig Castellar
-                </cite>
-            </blockquote>
+                </p>
+            </div>
         </section>
+
     </main>
+
 
     <!-- PIE DE PÁGINA -->
     <footer>
         <p>
-            © 2026 Proyecto Dualiza — Instituto Puig Castellar
+            © 2026 Proyecto Dualiza
         </p>
     </footer>
+
+
+    <!-- FUNCIONAMIENTO DEL CARRUSEL -->
+    <script>
+        const carrusel = document.getElementById("carrusel");
+        const anterior = document.getElementById("anterior");
+        const siguiente = document.getElementById("siguiente");
+
+        siguiente.addEventListener("click", () => {
+            carrusel.scrollBy({
+                left: 320,
+                behavior: "smooth"
+            });
+        });
+
+        anterior.addEventListener("click", () => {
+            carrusel.scrollBy({
+                left: -320,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
 </body>
 </html>
