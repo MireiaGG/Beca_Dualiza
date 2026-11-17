@@ -686,6 +686,12 @@ header {
     margin-top: 35px;
 }
 
+.centro {
+    width: 60%;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
 .izquierda {
     width: 35%;
     height: auto;
