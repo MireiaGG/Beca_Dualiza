@@ -26,6 +26,7 @@
                     <ul class="submenu">
                         <li><a href="retos.html">Retos</a></li>
                         <li><a href="viaje.html">Viaje</a></li>
+                        <li><a href="resultados.html">Resultados</a></li>
                     </ul>
                 </li>
 
@@ -58,40 +59,34 @@
             </div>
 
         </section>
-                <!-- IMPULSADO -->
-    <section class="colaboradores">
 
-        <p class="colaboradores-titulo">
-            Impulsado por Museo Natural de Viena
-        </p>
-
-        <div class="colaboradores-lista">
-            <img 
-                src="img/museo.webp" 
-                alt="museo natural de Viena"
-                class="logos-colaboradores"
-            >
-        </div>
-
-    </section>   
+        <!-- IMPULSADO -->
+        <section class="colaboradores">
+            <p class="colaboradores-titulo">
+                Impulsado por Museo Natural de Viena
+            </p>
+            <div class="colaboradores-lista">
+                <img
+                    src="img/museo.webp"
+                    alt="Museo Natural de Viena"
+                    class="logos-colaboradores"
+                >
+            </div>
+        </section>
 
         <!-- COLABORADORES -->
-    <section class="colaboradores">
-
-        <p class="colaboradores-titulo">
-            EN COLABORACIÓN CON
-        </p>
-
-        <div class="colaboradores-lista">
-            <img 
-                src="img/logosInicio.png" 
-                alt="Logotipos de FPEmpresa, CaixaBank e IES Sierra de Guara"
-                class="logos-colaboradores"
-            >
-        </div>
-
-    </section>      
-
+        <section class="colaboradores">
+            <p class="colaboradores-titulo">
+                EN COLABORACIÓN CON
+            </p>
+            <div class="colaboradores-lista">
+                <img
+                    src="img/logosInicio.png"
+                    alt="Logotipos de FPEmpresa, CaixaBank e IES Sierra de Guara"
+                    class="logos-colaboradores"
+                >
+            </div>
+        </section>
 
         <!-- CARRUSEL DE APARTADOS -->
         <section class="seccion apartados-inicio" id="apartados">
@@ -116,7 +111,6 @@
                 </div>
             </div>
 
-
             <div class="carrusel-contenedor" id="carrusel">
 
                 <a href="dualiza.html" class="apartado-card">
@@ -132,7 +126,6 @@
                     </div>
                 </a>
 
-
                 <a href="proyecto.html" class="apartado-card apartado-proyecto">
                     <span class="apartado-numero">02</span>
                     <div class="apartado-contenido">
@@ -145,7 +138,6 @@
                         <strong>Descubrir apartado →</strong>
                     </div>
                 </a>
-
 
                 <a href="retos.html" class="apartado-card apartado-dificultades">
                     <span class="apartado-numero">03</span>
@@ -160,7 +152,6 @@
                     </div>
                 </a>
 
-
                 <a href="viaje.html" class="apartado-card apartado-viaje">
                     <span class="apartado-numero">04</span>
                     <div class="apartado-contenido">
@@ -174,9 +165,21 @@
                     </div>
                 </a>
 
+                <a href="resultados.html" class="apartado-card apartado-resultados">
+                    <span class="apartado-numero">05</span>
+                    <div class="apartado-contenido">
+                        <span>INVESTIGACIÓN</span>
+                        <h3>Resultados</h3>
+                        <p>
+                            Descubre los resultados obtenidos durante nuestra
+                            investigación y los principales hallazgos del proyecto.
+                        </p>
+                        <strong>Descubrir apartado →</strong>
+                    </div>
+                </a>
 
                 <a href="galeria.html" class="apartado-card apartado-galeria">
-                    <span class="apartado-numero">05</span>
+                    <span class="apartado-numero">06</span>
                     <div class="apartado-contenido">
                         <span>RECUERDOS</span>
                         <h3>Galería</h3>
@@ -188,9 +191,8 @@
                     </div>
                 </a>
 
-
                 <a href="quienes-somos.html" class="apartado-card apartado-equipo">
-                    <span class="apartado-numero">06</span>
+                    <span class="apartado-numero">07</span>
                     <div class="apartado-contenido">
                         <span>PARTICIPANTES</span>
                         <h3>Quiénes somos</h3>
@@ -210,23 +212,18 @@
 
         </section>
 
-
         <!-- MEMORIA DEL PROYECTO -->
         <section class="memoria-seccion">
-
             <div class="memoria-contenido">
-
                 <div class="memoria-texto">
                     <span>DOCUMENTACIÓN</span>
                     <h2>Memoria del proyecto</h2>
-
                     <p>
                         En este documento recogeremos el desarrollo
                         completo de nuestra investigación, los
                         procedimientos realizados y los resultados
                         obtenidos.
                     </p>
-
                     <span class="memoria-estado">
                         Disponible próximamente
                     </span>
@@ -237,11 +234,8 @@
                     <strong>Memoria Dualiza</strong>
                     <span>Documento completo del proyecto</span>
                 </div>
-
             </div>
-
         </section>
-
 
         <!-- FRASE FINAL DEL EQUIPO -->
         <section class="frase-final">
@@ -260,14 +254,10 @@
 
     </main>
 
-
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p>
-            © 2026 Proyecto Dualiza
-        </p>
+        <p>© 2026 Proyecto Dualiza</p>
     </footer>
-
 
     <!-- FUNCIONAMIENTO DEL CARRUSEL -->
     <script>
@@ -277,14 +267,14 @@
 
         siguiente.addEventListener("click", () => {
             carrusel.scrollBy({
-                left: 320,
+                left: 330,
                 behavior: "smooth"
             });
         });
 
         anterior.addEventListener("click", () => {
             carrusel.scrollBy({
-                left: -320,
+                left: -330,
                 behavior: "smooth"
             });
         });

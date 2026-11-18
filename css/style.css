@@ -2129,7 +2129,7 @@ footer {
     .memoria-seccion {
         padding: 30px;
     }
-}
+
 
 @media (max-width: 650px) {
     .hero {
@@ -2260,4 +2260,10 @@ footer {
         width: 94%;
         padding: 20px 16px;
     }
+}
+
+
+/* TARJETA RESULTADOS DEL CARRUSEL */
+.apartado-resultados {
+    background: linear-gradient(145deg, #315b75, #4b91a2);
 }
